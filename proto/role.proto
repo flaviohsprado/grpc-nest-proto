@@ -1,0 +1,18 @@
+syntax = "proto3";
+
+package role;
+
+/*service RoleService {
+   rpc FindOne (FindOneRequest) returns (FindOneResponse) {}
+   rpc FindAll (FindAllRequest) returns (FindAllResponse) {}
+   rpc FindById (FindByIdRequest) returns (FindByIdResponse) {}
+   rpc Create (CreateRequest) returns (CreateResponse) {}
+   rpc Update (UpdateRequest) returns (UpdateResponse) {}
+   rpc Delete (DeleteRequest) returns (DeleteResponse) {}  
+}*/
+
+message Role {
+   string id = 1;
+   string name = 2;
+   string permissions = 3;   
+}
