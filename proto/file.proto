@@ -1,0 +1,24 @@
+syntax = "proto3";
+
+import "google/protobuf/wrappers.proto";
+
+package file;
+
+/*service FileService {
+   rpc FindOne (FindOneRequest) returns (FindOneResponse) {}
+   rpc FindAll (FindAllRequest) returns (FindAllResponse) {}
+   rpc FindById (FindByIdRequest) returns (FindByIdResponse) {}
+   rpc Create (CreateRequest) returns (CreateResponse) {}
+   rpc Update (UpdateRequest) returns (UpdateResponse) {}
+   rpc Delete (DeleteRequest) returns (DeleteResponse) {}  
+}*/
+
+message File {
+   string id = 1;
+   string originalName = 2;
+   string ownerId = 3;
+   string ownerType = 4;
+   string key = 5;
+   string url = 6;
+   google.protobuf.UInt32Value data = 7;
+}

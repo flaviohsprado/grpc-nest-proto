@@ -1,0 +1,120 @@
+syntax = "proto3";
+
+import "google/protobuf/wrappers.proto";
+import "google/protobuf/timestamp.proto";
+
+package user;
+
+service UserService {
+   rpc FindOne (FindOneRequest) returns (FindOneResponse) {}
+   rpc FindAll (FindAllRequest) returns (FindAllResponse) {}
+   rpc Create (CreateRequest) returns (CreateResponse) {}
+   rpc Update (UpdateRequest) returns (UpdateResponse) {}
+   rpc Delete (DeleteRequest) returns (DeleteResponse) {}  
+}
+
+message User {
+   string id = 1;
+   string username = 2;
+   string password = 3;
+   string email = 4;
+   string dateOfBirth = 5;
+   string phoneNumber = 6;
+   string address = 7;
+   string neighborhood = 8;
+   string city = 9;
+   string state = 10;
+   string country = 11;
+   string zipCode = 12;
+   google.protobuf.Timestamp createdAt = 13;
+   google.protobuf.Timestamp updatedAt = 14;
+   bool emailVerified = 15;
+   bool phoneVerified = 16;
+   string accessToken = 17;
+   File file = 18;
+   Role role = 19;
+}
+
+message UserBody {
+   string username = 1;
+   string password = 2;
+   string email = 3;
+   string dateOfBirth = 4;
+   string phoneNumber = 5;
+   string address = 6;
+   string neighborhood = 7;
+   string city = 8;
+   string state = 9;
+   string country = 10;
+   string zipCode = 11;
+   string roleId = 12;   
+}
+
+message File {
+   string id = 1;
+   string originalName = 2;
+   string ownerId = 3;
+   string ownerType = 4;
+   string key = 5;
+   string url = 6;
+   google.protobuf.UInt32Value data = 7;
+}
+
+message FileBody {
+   string id = 1;
+   string ownerId = 2;
+   string ownerType = 3;
+   string fieldname = 4;
+   string originalName = 5;
+   string encoding = 6;
+   string mimetype = 7;
+   google.protobuf.UInt32Value buffer = 8;
+   string key = 9;
+   string url = 10;
+}
+
+message Role {
+   string id = 1;
+   string name = 2;
+   string permissions = 3;   
+}
+
+message FindOneRequest {
+   string id = 1;
+}
+
+message FindOneResponse {
+   User user = 1;
+}
+
+message FindAllRequest {}
+
+message FindAllResponse {
+   repeated User user = 1;
+}
+
+message CreateRequest {
+   UserBody user = 1;
+   FileBody file = 2;
+}
+
+message CreateResponse {
+   User user = 1;
+}
+
+message UpdateRequest {
+   UserBody user = 1;
+   FileBody file = 2;
+}
+
+message UpdateResponse {
+   User user = 1;
+}
+
+message DeleteRequest {
+   string id = 1;
+}
+
+message DeleteResponse {
+   bool success = 1;
+}
