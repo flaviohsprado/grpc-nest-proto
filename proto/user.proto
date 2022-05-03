@@ -52,6 +52,30 @@ message UserBody {
    string roleId = 12;   
 }
 
+message UserResponse {
+   string id = 1;
+   string username = 2;
+   string password = 3;
+   string email = 4;
+   string dateOfBirth = 5;
+   string phoneNumber = 6;
+   string address = 7;
+   string neighborhood = 8;
+   string city = 9;
+   string state = 10;
+   string country = 11;
+   string zipCode = 12;
+   google.protobuf.Timestamp createdAt = 13;
+   google.protobuf.Timestamp updatedAt = 14;
+   bool emailVerified = 15;
+   bool phoneVerified = 16;
+   string accessToken = 17;
+   File file = 18;
+   string fileId = 19;
+   Role role = 20;
+   string roleId = 21;
+}
+
 message File {
    string id = 1;
    string originalName = 2;
@@ -86,7 +110,27 @@ message FindOneRequest {
 }
 
 message FindOneResponse {
-   User user = 1;
+   string id = 1;
+   string username = 2;
+   string password = 3;
+   string email = 4;
+   string dateOfBirth = 5;
+   string phoneNumber = 6;
+   string address = 7;
+   string neighborhood = 8;
+   string city = 9;
+   string state = 10;
+   string country = 11;
+   string zipCode = 12;
+   google.protobuf.Timestamp createdAt = 13;
+   google.protobuf.Timestamp updatedAt = 14;
+   bool emailVerified = 15;
+   bool phoneVerified = 16;
+   string accessToken = 17;
+   File file = 18;
+   string fileId = 19;
+   Role role = 20;
+   string roleId = 21;
 }
 
 message FindAllRequest {}
