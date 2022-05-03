@@ -94,8 +94,18 @@ message FindAllResponse {
 }
 
 message CreateRequest {
-   UserBody user = 1;
-   FileBody file = 2;
+   string username = 1;
+   string password = 2;
+   string email = 3;
+   string dateOfBirth = 4;
+   string phoneNumber = 5;
+   string address = 6;
+   string neighborhood = 7;
+   string city = 8;
+   string state = 9;
+   string country = 10;
+   string zipCode = 11;
+   string roleId = 12; 
 }
 
 message CreateResponse {
