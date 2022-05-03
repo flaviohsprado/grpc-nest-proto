@@ -8,8 +8,8 @@ package user;
 service UserService {
    rpc FindOne (FindOneRequest) returns (UserResponse) {}
    rpc FindAll (FindAllRequest) returns (FindAllResponse) {}
-   rpc Create (CreateRequest) returns (CreateResponse) {}
-   rpc Update (UpdateRequest) returns (UpdateResponse) {}
+   rpc Create (CreateRequest) returns (UserResponse) {}
+   rpc Update (UpdateRequest) returns (UserResponse) {}
    rpc Delete (DeleteRequest) returns (DeleteResponse) {}  
 }
 
@@ -154,17 +154,9 @@ message CreateRequest {
    string roleId = 12; 
 }
 
-message CreateResponse {
-   User user = 1;
-}
-
 message UpdateRequest {
-   UserBody user = 1;
-   FileBody file = 2;
-}
-
-message UpdateResponse {
-   User user = 1;
+   string id = 1;
+   UserBody user = 2;
 }
 
 message DeleteRequest {
