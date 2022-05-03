@@ -6,7 +6,7 @@ import "google/protobuf/timestamp.proto";
 package user;
 
 service UserService {
-   rpc FindOne (FindOneRequest) returns (FindOneResponse) {}
+   rpc FindOne (FindOneRequest) returns (UserResponse) {}
    rpc FindAll (FindAllRequest) returns (FindAllResponse) {}
    rpc Create (CreateRequest) returns (CreateResponse) {}
    rpc Update (UpdateRequest) returns (UpdateResponse) {}
