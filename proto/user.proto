@@ -32,7 +32,9 @@ message User {
    bool phoneVerified = 16;
    string accessToken = 17;
    File file = 18;
-   Role role = 19;
+   string fileId = 19;
+   Role role = 20;
+   string roleId = 21;
 }
 
 message UserBody {
