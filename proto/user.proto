@@ -65,8 +65,8 @@ message UserResponse {
    string state = 10;
    string country = 11;
    string zipCode = 12;
-   google.protobuf.Timestamp createdAt = 13;
-   google.protobuf.Timestamp updatedAt = 14;
+   string createdAt = 13;
+   string updatedAt = 14;
    bool emailVerified = 15;
    bool phoneVerified = 16;
    string accessToken = 17;
