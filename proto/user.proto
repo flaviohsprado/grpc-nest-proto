@@ -78,12 +78,12 @@ message UserResponse {
 
 message File {
    string id = 1;
-   string originalName = 2;
+   optional string originalName = 2;
    string ownerId = 3;
    string ownerType = 4;
    string key = 5;
    string url = 6;
-   google.protobuf.UInt32Value data = 7;
+   optional google.protobuf.UInt32Value data = 7;
 }
 
 message Role {
