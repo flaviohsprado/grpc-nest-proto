@@ -28,25 +28,25 @@ message User {
    bool emailVerified = 15;
    bool phoneVerified = 16;
    string accessToken = 17;
-   File file = 18;
-   string fileId = 19;
-   Role role = 20;
-   string roleId = 21;
+   optional File file = 18;
+   optional string fileId = 19;
+   optional Role role = 20;
+   optional string roleId = 21;
 }
 
 message UserBody {
    string username = 1;
    string password = 2;
    string email = 3;
-   string dateOfBirth = 4;
-   string phoneNumber = 5;
-   string address = 6;
-   string neighborhood = 7;
-   string city = 8;
-   string state = 9;
-   string country = 10;
-   string zipCode = 11;
-   string roleId = 12;   
+   optional string dateOfBirth = 4;
+   optional string phoneNumber = 5;
+   optional string address = 6;
+   optional string neighborhood = 7;
+   optional string city = 8;
+   optional string state = 9;
+   optional string country = 10;
+   optional string zipCode = 11;
+   optional string roleId = 12;   
 }
 
 message File {
